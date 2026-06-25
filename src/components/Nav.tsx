@@ -21,6 +21,7 @@ export default function Nav({ currentPage, onNavigate }: NavProps) {
   const links = [
     { id: 'home', label: 'Home' },
     { id: 'shop', label: 'Shop' },
+    { id: 'preorder', label: 'Под заказ' },
     { id: 'about', label: 'About' },
   ];
 
@@ -43,11 +44,11 @@ export default function Nav({ currentPage, onNavigate }: NavProps) {
             onClick={() => navigate('home')}
             className="flex items-center gap-3 group"
           >
-            <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-cyber-blue/60 border border-cyber-blue/20 px-2 py-0.5 group-hover:text-cyber-blue group-hover:border-cyber-blue/50 transition-all duration-300">
+            <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-cyber-pink/60 border border-cyber-pink/20 px-2 py-0.5 group-hover:text-cyber-pink group-hover:border-cyber-pink/50 transition-all duration-300">
               UA
             </span>
-            <span className="font-editorial text-lg tracking-[0.15em] text-white font-semibold">
-              VOID
+            <span className="font-editorial text-lg tracking-[0.05em] text-white font-bold">
+              mickey.shop
             </span>
           </button>
 
@@ -59,7 +60,7 @@ export default function Nav({ currentPage, onNavigate }: NavProps) {
                 onClick={() => navigate(link.id)}
                 className={`text-xs tracking-[0.2em] uppercase font-medium transition-all duration-200 ${
                   currentPage === link.id
-                    ? 'text-cyber-blue'
+                    ? 'text-cyber-pink'
                     : 'text-white/50 hover:text-white'
                 }`}
               >
@@ -77,7 +78,7 @@ export default function Nav({ currentPage, onNavigate }: NavProps) {
             >
               <ShoppingBag size={18} />
               {itemCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-cyber-blue text-void-950 text-[9px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-cyber-pink text-white text-[9px] font-bold rounded-full flex items-center justify-center">
                   {itemCount}
                 </span>
               )}
@@ -115,7 +116,7 @@ export default function Nav({ currentPage, onNavigate }: NavProps) {
               key={link.id}
               onClick={() => navigate(link.id)}
               className={`text-2xl font-editorial tracking-widest transition-all duration-200 ${
-                currentPage === link.id ? 'text-cyber-blue' : 'text-white/70 hover:text-white'
+                currentPage === link.id ? 'text-cyber-pink' : 'text-white/70 hover:text-white'
               }`}
             >
               {link.label}

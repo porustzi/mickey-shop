@@ -33,8 +33,8 @@ export default function ProductPage({ productId, onNavigate }: ProductPageProps)
   };
 
   const telegramMessage = product
-    ? `https://t.me/void_store?text=${encodeURIComponent(`Hi! I'm interested in: ${product.name} (${product.size}) — ${formatPrice(product.price)}`)}`
-    : 'https://t.me/void_store';
+    ? `https://t.me/mickey_shop?text=${encodeURIComponent(`Hi! I'm interested in: ${product.name} (${product.size}) — ${formatPrice(product.price)}`)}`
+    : 'https://t.me/mickey_shop';
 
   if (loading) {
     return (
@@ -66,7 +66,7 @@ export default function ProductPage({ productId, onNavigate }: ProductPageProps)
 
   const conditionColors: Record<Product['condition'], string> = {
     new: 'text-cyber-green border-cyber-green/30 bg-cyber-green/5',
-    like_new: 'text-cyber-blue border-cyber-blue/30 bg-cyber-blue/5',
+    like_new: 'text-cyber-pink border-cyber-pink/30 bg-cyber-pink/5',
     good: 'text-white/60 border-white/20 bg-white/[0.03]',
     fair: 'text-amber-400/70 border-amber-400/25 bg-amber-400/[0.05]',
   };
@@ -129,7 +129,7 @@ export default function ProductPage({ productId, onNavigate }: ProductPageProps)
                     key={i}
                     onClick={() => setImageIndex(i)}
                     className={`w-16 h-20 overflow-hidden border-2 transition-all ${
-                      i === imageIndex ? 'border-cyber-blue' : 'border-transparent opacity-50 hover:opacity-80'
+                      i === imageIndex ? 'border-cyber-pink' : 'border-transparent opacity-50 hover:opacity-80'
                     }`}
                   >
                     <img src={img} alt="" className="w-full h-full object-cover" />
@@ -171,7 +171,7 @@ export default function ProductPage({ productId, onNavigate }: ProductPageProps)
                 </span>
               )}
               {product.original_price && (
-                <span className="text-xs font-mono text-cyber-blue/70 border border-cyber-blue/20 px-2 py-0.5">
+                <span className="text-xs font-mono text-cyber-pink/70 border border-cyber-pink/20 px-2 py-0.5">
                   -{Math.round((1 - product.price / product.original_price) * 100)}%
                 </span>
               )}

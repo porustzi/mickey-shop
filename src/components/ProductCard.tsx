@@ -19,9 +19,9 @@ export default function ProductCard({ product, onNavigate, aspect = 'portrait' }
 
   const conditionColors: Record<Product['condition'], string> = {
     new: 'text-cyber-green border-cyber-green/30',
-    like_new: 'text-cyber-blue border-cyber-blue/30',
+    like_new: 'text-cyber-pink border-cyber-pink/30',
     good: 'text-white/50 border-white/20',
-    fair: 'text-amber-400/60 border-amber-400/20',
+    fair: 'text-cyber-red/60 border-cyber-red/20',
   };
 
   return (
@@ -43,8 +43,8 @@ export default function ProductCard({ product, onNavigate, aspect = 'portrait' }
         <div className="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <button
             onClick={handleAddToCart}
-            className="w-full py-2.5 bg-cyber-blue text-void-950 text-xs font-semibold tracking-widest uppercase
-                       flex items-center justify-center gap-2 hover:bg-white transition-colors duration-200"
+            className="w-full py-2.5 bg-cyber-pink text-white text-xs font-semibold tracking-widest uppercase
+                       flex items-center justify-center gap-2 hover:bg-white hover:text-void-950 transition-colors duration-200"
           >
             <ShoppingBag size={13} />
             Add to Cart
@@ -81,7 +81,7 @@ export default function ProductCard({ product, onNavigate, aspect = 'portrait' }
           </div>
           <ArrowUpRight
             size={14}
-            className="shrink-0 text-white/20 group-hover:text-cyber-blue mt-0.5 transition-colors duration-200"
+            className="shrink-0 text-white/20 group-hover:text-cyber-pink mt-0.5 transition-colors duration-200"
           />
         </div>
 

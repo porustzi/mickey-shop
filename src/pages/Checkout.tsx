@@ -60,8 +60,8 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
     return (
       <div className="min-h-screen pt-24 flex items-center justify-center px-6">
         <div className="text-center max-w-md animate-fade-in">
-          <div className="w-16 h-16 border border-cyber-blue/40 flex items-center justify-center mx-auto mb-8">
-            <Check size={28} className="text-cyber-blue" />
+          <div className="w-16 h-16 border border-cyber-pink/40 flex items-center justify-center mx-auto mb-8">
+            <Check size={28} className="text-cyber-pink" />
           </div>
           <h1 className="font-editorial text-4xl text-white mb-4">Order Confirmed</h1>
           <p className="text-white/40 text-sm leading-relaxed mb-3">
@@ -73,7 +73,7 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
 
           <div className="flex flex-col gap-3">
             <a
-              href={`https://t.me/void_store?text=${telegramMsg}`}
+              href={`https://t.me/mickey_shop?text=${telegramMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-telegram justify-center"

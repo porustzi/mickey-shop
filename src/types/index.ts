@@ -30,5 +30,16 @@ export interface CheckoutFormData {
   comment: string;
 }
 
+export interface PreorderProduct {
+  id: string;
+  name: string;
+  description: string | null;
+  price: number;
+  category: string;
+  images: string[];
+  delivery_time: string;
+  deposit: number;
+}
+
 export type Category = 'all' | 'streetwear' | 'sneakers' | 'jackets' | 'accessories' | 'vintage';
 export type SortOption = 'newest' | 'price_asc' | 'price_desc';

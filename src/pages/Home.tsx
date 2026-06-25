@@ -76,35 +76,35 @@ export default function Home({ onNavigate }: HomeProps) {
     <div className="min-h-screen">
       {/* HERO */}
       <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        {/* Background glow orbs */}
+        {/* Background glow orbs - gothic red/pink */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-cyber-blue/5 rounded-full blur-[120px] animate-glow-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyber-purple/5 rounded-full blur-[100px] animate-glow-pulse animate-delay-300" />
+          <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-cyber-pink/5 rounded-full blur-[120px] animate-glow-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyber-red/5 rounded-full blur-[100px] animate-glow-pulse animate-delay-300" />
         </div>
 
         {/* Horizontal decorative line */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyber-blue/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyber-pink/20 to-transparent" />
 
         {/* Center content */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-16">
           {/* Tag */}
           <div className="flex items-center justify-center mb-10">
             <span className="label-tag animate-fade-in">
-              Curated Resale — Ukraine
+              Gothic Archive — Ukraine
             </span>
           </div>
 
           {/* Main headline */}
           <h1 className="font-editorial text-[clamp(4rem,12vw,9rem)] leading-[0.9] tracking-[-0.02em] text-white mb-8 animate-slide-up">
-            <span className="block text-white">VOID</span>
+            <span className="block text-white glow-neon">mickey.shop</span>
             <span className="block text-white/15 text-[0.55em] font-light tracking-[0.08em] mt-2">
-              ARCHIVE
+              GOTHIC ARCHIVE
             </span>
           </h1>
 
           {/* Subline */}
           <p className="text-white/35 text-sm md:text-base font-light tracking-[0.25em] uppercase mb-12 animate-slide-up animate-delay-200">
-            Streetwear. Sneakers. Vintage. No noise.
+            Streetwear. Sneakers. Vintage. Под заказ.
           </p>
 
           {/* CTA */}
@@ -112,8 +112,8 @@ export default function Home({ onNavigate }: HomeProps) {
             <button onClick={() => onNavigate('shop')} className="btn-primary">
               Browse Catalog
             </button>
-            <button onClick={() => onNavigate('about')} className="btn-ghost">
-              Our Story
+            <button onClick={() => onNavigate('preorder')} className="btn-ghost">
+              Под заказ
             </button>
           </div>
         </div>
@@ -137,17 +137,17 @@ export default function Home({ onNavigate }: HomeProps) {
             <div>
               <span className="label-tag mb-8 inline-block">Concept</span>
               <h2 className="font-editorial text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8">
-                Every piece tells
+                Dark aesthetics,
                 <br />
-                <em className="text-white/40">a story.</em>
+                <em className="text-white/40">crafted for you.</em>
               </h2>
               <p className="text-white/40 text-base leading-relaxed mb-10 max-w-md">
-                VOID is not a marketplace. It's a curated archive of fashion objects — pieces that lived a life before
-                finding their next owner. Secondhand, not second-rate.
+                mickey.shop is a gothic curated archive — streetwear, sneakers, vintage, and made-to-order pieces.
+                Every item is handpicked. No noise. Only the black.
               </p>
               <button
                 onClick={() => onNavigate('shop')}
-                className="group flex items-center gap-3 text-sm tracking-widest uppercase text-cyber-blue hover:text-white transition-colors duration-300"
+                className="group flex items-center gap-3 text-sm tracking-widest uppercase text-cyber-pink hover:text-white transition-colors duration-300"
               >
                 Explore Archive
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -157,10 +157,10 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: '400+', label: 'Pieces Archived' },
+                { value: '200+', label: 'Pieces Archived' },
                 { value: '3 Days', label: 'Avg. Delivery' },
                 { value: '100%', label: 'Authenticated' },
-                { value: 'Direct', label: 'Seller Shipping' },
+                { value: 'Под заказ', label: 'Custom Orders' },
               ].map((stat) => (
                 <div key={stat.label} className="glass p-6 border-glow">
                   <div className="font-editorial text-3xl text-white mb-2">{stat.value}</div>
@@ -186,7 +186,7 @@ export default function Home({ onNavigate }: HomeProps) {
             </div>
             <button
               onClick={() => onNavigate('shop')}
-              className="hidden sm:flex items-center gap-2 text-xs tracking-widest uppercase text-white/30 hover:text-cyber-blue transition-colors duration-200"
+              className="hidden sm:flex items-center gap-2 text-xs tracking-widest uppercase text-white/30 hover:text-cyber-pink transition-colors duration-200"
             >
               View All <ArrowRight size={12} />
             </button>
@@ -254,23 +254,28 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-2xl mx-auto text-center">
           <span className="label-tag mb-6 inline-block">Direct Channel</span>
           <h2 className="font-editorial text-3xl md:text-4xl text-white mb-6">
-            Have questions?<br />
-            <em className="text-white/30">Talk to us directly.</em>
+            Want something unique?<br />
+            <em className="text-white/30">Order под заказ.</em>
           </h2>
           <p className="text-white/35 text-sm mb-10 leading-relaxed">
-            Our managers are available on Telegram. Get authenticity confirmations, size advice, or just chat about the pieces.
+            Custom pieces, bespoke tailoring, exclusive drops — order via Telegram and we'll make it happen.
           </p>
-          <a
-            href="https://t.me/void_store"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-telegram inline-flex mx-auto"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-            </svg>
-            Message on Telegram
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://t.me/mickey_shop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-telegram inline-flex mx-auto"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+              Message on Telegram
+            </a>
+            <button onClick={() => onNavigate('preorder')} className="btn-ghost">
+              Под заказ
+            </button>
+          </div>
         </div>
       </section>
     </div>

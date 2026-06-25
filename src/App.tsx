@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { CartProvider } from './context/CartContext';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import Preorder from './pages/Preorder';
 import ProductPage from './pages/ProductPage';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import About from './pages/About';
 
-type Page = 'home' | 'shop' | 'product' | 'cart' | 'checkout' | 'about';
+type Page = 'home' | 'shop' | 'preorder' | 'product' | 'cart' | 'checkout' | 'about';
 
 export default function App() {
   const [page, setPage] = useState<Page>('home');
@@ -49,6 +50,7 @@ export default function App() {
               initialCategory={shopCategory}
             />
           )}
+          {page === 'preorder' && <Preorder />}
           {page === 'product' && productId && (
             <ProductPage productId={productId} onNavigate={navigate} />
           )}

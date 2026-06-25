@@ -10,12 +10,12 @@ export default function About({ onNavigate }: AboutProps) {
         <div className="border-b border-white/[0.06] pb-16 mb-16">
           <span className="label-tag mb-6 inline-block">001 / Story</span>
           <h1 className="font-editorial text-[clamp(3rem,8vw,7rem)] leading-[0.9] text-white tracking-[-0.02em] mb-8">
-            We archive<br />
-            <em className="text-white/20">the culture.</em>
+            Gothic<br />
+            <em className="text-white/20">archive.</em>
           </h1>
           <p className="text-white/40 text-base md:text-lg leading-relaxed max-w-xl">
-            VOID is a Ukrainian curated resale platform for people who understand that the best pieces
-            aren't always found in retail stores.
+            mickey.shop is a Ukrainian gothic curated archive — streetwear, sneakers, vintage, and made-to-order pieces.
+            Dark aesthetics, zero compromise.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="col-span-2 aspect-video overflow-hidden">
               <img
                 src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="VOID Archive"
+                alt="mickey.shop Archive"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
@@ -50,11 +50,11 @@ export default function About({ onNavigate }: AboutProps) {
           <div className="flex flex-col justify-center space-y-8">
             <div>
               <h2 className="font-editorial text-2xl text-white mb-4">
-                Curated by people who care.
+                Dark curation.
               </h2>
               <p className="text-white/40 text-sm leading-relaxed">
-                Every item on VOID goes through a manual review. We don't accept listings that don't
-                meet our standards. Condition, authenticity, and presentation — all matter here.
+                Every item on mickey.shop goes through a manual review. We don't accept listings that don't
+                meet our dark aesthetic standards. Condition, authenticity, presentation — all matter here.
               </p>
             </div>
 
@@ -63,18 +63,18 @@ export default function About({ onNavigate }: AboutProps) {
                 No account needed.
               </h2>
               <p className="text-white/40 text-sm leading-relaxed">
-                We believe the browsing experience should be frictionless. Find something you want,
-                fill out a simple form, and it ships directly from the seller via Nova Poshta.
+                Browse freely. Find something you want, fill out a simple form, and it ships directly
+                from the seller via Nova Poshta.
               </p>
             </div>
 
             <div>
               <h2 className="font-editorial text-2xl text-white mb-4">
-                Telegram-first support.
+                Telegram-first. Под заказ.
               </h2>
               <p className="text-white/40 text-sm leading-relaxed">
-                Got questions? Want to verify something before you buy? Our managers are reachable on
-                Telegram and respond fast. Human, not bots.
+                Want something custom? Order под заказ via Telegram. Our crafters bring your vision to life —
+                bespoke pieces made just for you.
               </p>
             </div>
           </div>
@@ -88,21 +88,21 @@ export default function About({ onNavigate }: AboutProps) {
               {
                 number: '01',
                 title: 'Authentic Only',
-                body: 'No replicas. Every item is verified before listing. Sellers are responsible for the condition described.'
+                body: 'No replicas. Every item is verified before listing. Dark aesthetics, real pieces.'
               },
               {
                 number: '02',
-                title: 'Editorial Curation',
-                body: 'We don\'t list everything. We list what\'s worth wearing. Quality over quantity, always.'
+                title: 'Gothic Curation',
+                body: 'We don\'t list everything. We list what fits the dark aesthetic. Quality over quantity.'
               },
               {
                 number: '03',
-                title: 'Fast & Direct',
-                body: 'Seller ships directly via Nova Poshta. No middleman warehousing. Your order is on its way within 2 days.'
+                title: 'Под заказ',
+                body: 'Custom made-to-order pieces. Choose, order via Telegram, and we craft it for you.'
               },
             ].map((item) => (
               <div key={item.number} className="glass p-7 border-glow glass-hover">
-                <p className="font-mono text-[10px] text-cyber-blue/50 tracking-[0.3em] mb-5">
+                <p className="font-mono text-[10px] text-cyber-pink/50 tracking-[0.3em] mb-5">
                   {item.number}
                 </p>
                 <h3 className="font-editorial text-xl text-white mb-3">{item.title}</h3>
@@ -116,25 +116,17 @@ export default function About({ onNavigate }: AboutProps) {
         <div className="section-divider pt-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h2 className="font-editorial text-3xl text-white mb-2">
-              Ready to browse?
+              Embrace the dark.
             </h2>
-            <p className="text-white/30 text-sm">The archive is always being updated.</p>
+            <p className="text-white/30 text-sm">Browse the archive or order под заказ.</p>
           </div>
           <div className="flex items-center gap-4">
             <button onClick={() => onNavigate('shop')} className="btn-primary">
               Shop Now
             </button>
-            <a
-              href="https://t.me/void_store"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-telegram"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-              </svg>
-              Telegram
-            </a>
+            <button onClick={() => onNavigate('preorder')} className="btn-ghost">
+              Под заказ
+            </button>
           </div>
         </div>
       </div>

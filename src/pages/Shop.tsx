@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { SlidersHorizontal, X } from 'lucide-react';
 import { fetchProducts } from '../lib/api';
 import type { Product, Category, SortOption } from '../types';
 import ProductCard from '../components/ProductCard';
@@ -31,7 +30,6 @@ export default function Shop({ onNavigate, initialCategory }: ShopProps) {
     (initialCategory as Category) || 'all'
   );
   const [sort, setSort] = useState<SortOption>('newest');
-  const [filtersOpen, setFiltersOpen] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -46,7 +44,7 @@ export default function Shop({ onNavigate, initialCategory }: ShopProps) {
       {/* Header */}
       <div className="max-w-screen-xl mx-auto px-6 mb-12">
         <div className="border-b border-white/[0.06] pb-8">
-          <span className="label-tag mb-4 inline-block">Archive</span>
+          <span className="label-tag mb-4 inline-block">mickey.shop</span>
           <h1 className="font-editorial text-4xl md:text-5xl text-white">
             Shop
           </h1>
@@ -67,7 +65,7 @@ export default function Shop({ onNavigate, initialCategory }: ShopProps) {
                 onClick={() => setCategory(cat.id)}
                 className={`px-4 py-2 text-xs font-mono tracking-[0.15em] uppercase transition-all duration-200 ${
                   category === cat.id
-                    ? 'bg-cyber-blue text-void-950 font-semibold'
+                    ? 'bg-cyber-pink text-white font-semibold'
                     : 'text-white/40 hover:text-white border border-white/10 hover:border-white/25'
                 }`}
               >
@@ -81,7 +79,7 @@ export default function Shop({ onNavigate, initialCategory }: ShopProps) {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as SortOption)}
-              className="bg-void-900 border border-white/10 text-white/50 text-xs font-mono tracking-wide px-3 py-2 focus:outline-none focus:border-cyber-blue/40 cursor-pointer"
+              className="bg-void-900 border border-white/10 text-white/50 text-xs font-mono tracking-wide px-3 py-2 focus:outline-none focus:border-cyber-pink/40 cursor-pointer"
             >
               {SORT_OPTIONS.map((opt) => (
                 <option key={opt.value} value={opt.value}>
